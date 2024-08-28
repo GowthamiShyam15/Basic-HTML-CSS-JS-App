@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Document</title>
+    <link rel="icon" href="C:\Users\Admin\Downloads\favicon_io (1)\favicon-16x16.png">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        setInterval("changeColor()",1000);
+        function changeColor(){
+            var x=document.getElementById("color");
+            if(x.style.color=="rgb(255, 0, 187)")
+            x.style.color="green";
+            else if(x.style.color=="green")
+            x.style.color="orange";
+            else if(x.style.color=="orange")
+            x.style.color="blue";
+            else if(x.style.color=="blue")
+            x.style.color="red";
+            else if(x.style.color=="red")
+            x.style.color="hotpink";
+            else x.style.color="rgb(255, 0, 187)"; 
+        }
+
+    </script>
+<style>
+    button{
+        background-color: grey;
+        color:yellow;
+        font-size: 1.5em;
+        font-weight: bolder;
+        border-radius: 3px;
+        border: 2px solid green;
+        margin:70px;
+        padding:10px;
+        cursor: pointer;
+
+    }
+</style>
+</head>
+<body>
+   <div class="heading">
+    <img src="C:\Users\Admin\OneDrive\Desktop\HTML\HTML project\Basic WebSite\G1.jpeg" alt="logo" width="100" height="100" >
+      <h1>WEB Development</h1>
+      <h2>Easy to learn</h2>
+   </div> 
+   <div class="nav">
+       <ul>
+           <li><a href="main.html">HOME</a></li>
+           <li><a href="page1.html">HTML</a></li>
+           <li><a href="page2.html">CSS</a></li>
+           <li><a href="page3.html">JAVASCRIPT</a></li>
+           <li><a href="registration.html">REGISTRATION</a></li>
+           <li><a href="about.html">ABOUT US</a></li>
+       </ul>
+   </div> 
+ <div class="content1">
+     <h3 id="color"><u>JAVASCRIPT</u></h3>
+<p style="padding-top:20px;"><b>JavaScript</b> is the world most popular lightweight, interpreted compiled programming language. It is also known as scripting language for web pages. It is well-known for the development of web pages, many non-browser environments also use it. JavaScript can be used for Client-side developments as well as Server-side developments.</p>
+<span id="demo" class="time"></span>
+<p><b>JavaScript </b>can be added to your HTML file in two ways:</p>
+<ul>
+    <li><b>Internal JS:</b> We can add JavaScript directly to our HTML file by writing the code inside the <span style="color:red">&lt;script&gt;</span> tag. The <span style="color:red">&lt;script&gt;</span> tag can either be placed inside the <head> or the <body> tag according to the requirement.</li>
+   <li><b>External JS:</b> We can write JavaScript code in other file having an extension .js and then link this file inside the <span style="color:red">&lt;head&gt;</span> tag of the HTML file in which we want to add this code.</li>
+
+</ul>
+<button  onclick="document.getElementById('light').src='bulb-on.jpg'" >TURN ON</button>
+
+<img src="bulb-off.jpg" id="light"  style="width:200px;height:200px">
+
+<button onclick="document.getElementById('light').src='bulb-off.jpg'" >TURN OFF</button>
+
+ </div>
+
+   <div class="footer">
+       <marquee bgcolor="aqua" scrollamount="1" direction="up">&copy; This is created by <span style="color:green;">GOWTHAMI </span>&nbsp;on&nbsp;<span id="d" style="color:Red;"> </span></marquee>
+  </div> 
+
+  <script>
+      function Time(){
+          var today=new Date();
+          var h=today.getHours();
+          var m=today.getMinutes();
+          var s=today.getSeconds();
+          document.getElementById("demo").innerHTML=h+":"+m+":"+s;
+          setInterval("Time()",1000);
+      }
+      Time();
+  </script>
+   <script>
+        var today=new Date();
+        document.getElementById("d").innerHTML=today;
+   
+</script>
+</body>
+</html>
+
+
+
+
